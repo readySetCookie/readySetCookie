@@ -1,0 +1,150 @@
+
+.master-box {
+  padding: 0 15%;
+}
+
+@media (max-width: 768px) {
+  .master-box {
+    padding: 0 0 !important;
+  }
+}
+
+.faq-header {
+
+  padding: 0 30px 10px 0;
+  text-align: center;
+  color: white;
+}
+
+h1.title {
+  font-size: 2.1em;
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+
+#myInput {
+  width: 50%;
+  font-size: 18px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #000;
+  margin: 15px 0 15px 0;
+}
+
+#myBtnContainer {
+  margin: 15px;
+  letter-spacing: 5px;
+}
+
+/* Style the buttons */
+.btnA {
+  border: none;
+  outline: none;
+  padding: 8px 15px 8px 0;
+  background-color: #80a0e4;
+  color: #ffffffd2;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btnA:hover {
+  background: #4369bb;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3), 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btnA.active {
+  background: #4369bb;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3), 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btnA::before {
+  content: "\00bb   ";
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.btnA.active::before {
+  content: "\00bb   ";
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#myUL {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+#myUL li span {
+  cursor: pointer;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  border: 1px solid lightgrey;
+  margin-top: -1px;
+  padding: 10px 0px 10px 0px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #565555;
+  display: block;
+}
+
+#myUL li span:hover:not(.header) {
+  background-color: #e4ecf9;
+  border: 1px solid grey;
+}
+
+.filterDiv {
+  display: none; /* Hidden by default */
+  transition: all 0.3s;
+  margin-bottom: 4px;
+}
+
+.show {
+  display: block;
+}
+
+.accordion-thumb {
+  font-weight: bold;
+  background: white;
+}
+
+/* Active answer */
+.filterDiv.is-active .accordion-thumb::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion-thumb::before {
+  content: "";
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.accordion-panel {
+  padding: 10px 20px 10px 20px;
+  display: none;
+  color: black;
+  font-size: 14px;
+  font-weight: normal;
+  background: white;
+}
